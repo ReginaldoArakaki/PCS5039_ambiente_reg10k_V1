@@ -1,0 +1,198 @@
+{
+  "gerado_em": "2026-10-26T18:42:16",
+  "comando": "/home/claude/pcs5039_ambiente_reg10k_v1/nucleo/experimentos/__main__.py --sementes 30 --processos 4 --controladores referencia alunos.grupo_exemplo",
+  "versao": {
+    "nome": "V1",
+    "titulo": "sala e cozinha, com gêmeo digital e espelho",
+    "descricao": "Versão V1 da automação: sala e cozinha ligadas por um vão, um controlador por cômodo, gêmeo e espelho por cômodo (v1dt, v1dta, v1dtb)",
+    "ambientes": [
+      "residencia-v1"
+    ],
+    "nucleo_tag": "nucleo-v1.0",
+    "nucleo": "nucleo-v1.0"
+  },
+  "nucleo": {
+    "nome": "nucleo-v1.0",
+    "commit": "dfef3a470dbadd15cce540642096014908ee453f",
+    "descricao_git": "nucleo-v1.0"
+  },
+  "repositorio_versao": {
+    "commit": "e065c67aea7d50993946f08abdd8154dbf5c8199",
+    "descricao_git": "e065c67"
+  },
+  "python": "3.13.16",
+  "sementes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "modos": [
+    "CENARIO"
+  ],
+  "controladores": [
+    "referencia",
+    "alunos.grupo_exemplo"
+  ],
+  "familias": {
+    "F1": {
+      "nome": "Uso normal: entrar, sair, permanecer, interruptor",
+      "cenarios": [
+        "M01",
+        "M02",
+        "M04",
+        "M06",
+        "M09",
+        "M10"
+      ]
+    },
+    "F2": {
+      "nome": "Permanência parada (falso negativo)",
+      "cenarios": [
+        "M05"
+      ]
+    },
+    "F3": {
+      "nome": "Passagem sem entrar e disparos espúrios (falso positivo)",
+      "cenarios": [
+        "M03"
+      ]
+    },
+    "F4": {
+      "nome": "Falha de dispositivo",
+      "cenarios": [
+        "M07",
+        "M08"
+      ]
+    },
+    "F5": {
+      "nome": "Queda de rede, plataforma ou hub",
+      "cenarios": [
+        "M13"
+      ]
+    },
+    "F6": {
+      "nome": "Comando remoto e preferência",
+      "cenarios": [
+        "M11",
+        "M12"
+      ]
+    },
+    "F7": {
+      "nome": "Espelho e consulta pelo app",
+      "cenarios": [
+        "M14"
+      ]
+    }
+  },
+  "n_execucoes": 840,
+  "observacoes": [
+    "OR-12 (execução pareada sem falha de rede) não é calculada nos experimentos.",
+    "modo CENARIO = o modo declarado em cada roteiro."
+  ],
+  "csv": {
+    "arquivo": "experimentos-V1-20261026.csv",
+    "sha256": "4e5c43d0dfb52fa78e5d0590db9673868e449c9913fa2ba6f46f7a9cfee5e4ca",
+    "colunas": [
+      "versao",
+      "nucleo",
+      "ambiente",
+      "n_comodos",
+      "n_moradores",
+      "familia",
+      "cenario",
+      "tipo",
+      "controlador",
+      "semente",
+      "modo",
+      "modo_rede",
+      "requisitos_ok",
+      "invariantes_ok",
+      "n_eventos",
+      "desperdicio_s",
+      "escuro_com_ocupante_s",
+      "apagamentos_indevidos",
+      "acionamentos",
+      "latencia_reacao_ms_p95",
+      "latencia_reacao_ms_max",
+      "atraso_percebido_ms_max",
+      "desperdicio_por_saida_s_max",
+      "ocupacao_desconhecida_s",
+      "tempo_ocupada_s",
+      "tempo_luz_acesa_s",
+      "atualidade_gemeo_ms_p95",
+      "gemeo_nao_atual_s",
+      "comando_remoto_ms_p95",
+      "comandos_remotos",
+      "comandos_vencidos_executados",
+      "efeitos_duplicados_remotos",
+      "reconciliacao_ms_max",
+      "divergencia_alem_prazo_s",
+      "eventos_nao_entregues",
+      "fila_max",
+      "espelho_fiel_pct",
+      "espelho_fiel_s",
+      "erro_de_percepcao_s",
+      "erro_de_sincronizacao_s",
+      "espelho_nao_afirma_s"
+    ]
+  },
+  "entradas_sha256": {
+    "cenarios/roteiros/M01.json": "51636d47941a38ce0d2da9941689fb6fbae96ae79174c3b3273d21009b030138",
+    "cenarios/esperado/M01.json": "6a1bc5670f4156b5d42e18589747ef1463b019c58a99d9b3284035e34baa9b23",
+    "cenarios/roteiros/M02.json": "5c05f93704d61856b7f74e061c94242a2a92977ccdf59e3d234338b59b53d6a4",
+    "cenarios/esperado/M02.json": "1edadde4a558362951262da818ec9b3e1af891bca9707aa145afd16533acad71",
+    "cenarios/roteiros/M03.json": "cae74f4de0c79ab9c7f2d232a00687cdfe1809ae3e5d561725a5ed7b3c59f86d",
+    "cenarios/esperado/M03.json": "6a950bb99b42a102ac0a7daaf9380f3fc834d9c36dd29ac7607004df1b283da3",
+    "cenarios/roteiros/M04.json": "c0f8e5b0e50c77a2ff9902f337629bffbb0862676552885cec4b97509238c09c",
+    "cenarios/esperado/M04.json": "7f3dff7e981f832d19cfd5555753cf5b7d3425a08a1f3060cc30b4860621cc73",
+    "cenarios/roteiros/M05.json": "acc8ce09a6c45a23074fc7124eeef296ef806ff119c9852c2de55ff02e3f6835",
+    "cenarios/esperado/M05.json": "5533e492b2bfc8e7e4291165a45f6d2271e81d207e336e2ab046c5069c02d2bb",
+    "cenarios/roteiros/M06.json": "8a238e85dd30b01589939518aa66fed16df03328888380b23449ecd59f5f1492",
+    "cenarios/esperado/M06.json": "ba49fe38ff9cb636c1197be0c162d22c5a147d0e08bef4bea8a70781a8b88c6f",
+    "cenarios/roteiros/M07.json": "83898eebadf97e7677fde413fece399fe9aab5094717c3ec578fb04464c06245",
+    "cenarios/esperado/M07.json": "a8c618dd111c11ca7595b05aab3dddcb15167501955dba7b85608f1c44e807e8",
+    "cenarios/roteiros/M08.json": "2e9e62054bdd1e2449bae2ed75bbcb7f764fa5a8eea163622f7e87562631386a",
+    "cenarios/esperado/M08.json": "3c9c23cae57fd47c11ad93e4f4c0b27713fd6fd92babcd218e4467c3c940ddd5",
+    "cenarios/roteiros/M09.json": "9a49e38e91c7ca22ef9afe74a5175bf84d2a4a8c370493a3ac1c944f66a50417",
+    "cenarios/esperado/M09.json": "19e464a2a76af9fdcb74708083100dc31d0adfbd0ac1b69184f7c334a2451650",
+    "cenarios/roteiros/M10.json": "0c3783d18aca143ae9f803344cf4072b5229d738874a537ff10e2e1230319f4d",
+    "cenarios/esperado/M10.json": "48a66f48685a065fcd9be4a7380819874674af46a0536e319af1312f578ec13b",
+    "cenarios/roteiros/M11.json": "a7290a4e617d032247273559f24de871c043740da6760743866785037dfd91d7",
+    "cenarios/esperado/M11.json": "f80c8215096df9d5b17fcf4dddffc357141abdede48f8e19368811e0adddfc78",
+    "cenarios/roteiros/M12.json": "934b20353759444c305893a94f7389eebe206bb466374d6fa9fec72c0b3a462e",
+    "cenarios/esperado/M12.json": "3828bd07b6bfa79b2d25696c2fde450b995e295d7ce4025bb865ffd566ff9dc5",
+    "cenarios/roteiros/M13.json": "92340f2fd9aee3fd563794a84e501497af9baf166933d6cc78113d09cf550eeb",
+    "cenarios/esperado/M13.json": "232305d58f85ac7d37941c132d890846f3d4b34f0f6bef0b681008dfe6ec3961",
+    "cenarios/roteiros/M14.json": "e56253a4945ade86dda5d26b1921fba5232f7452f34047b646639a6d292163d9",
+    "cenarios/esperado/M14.json": "d262066972c769f8eec7bfd4fa68f8f6d54669d35e28275359b9cda5a825ce5b",
+    "ambiente/residencia-v1.json": "62767d12b92788950404c7c5cbecdab439d9e22a28dcd8cb336b32d99f0f959f"
+  },
+  "ressalva": "Resultados de simulação, não de medição (P7): valem para o modelo e os parâmetros declarados."
+}
