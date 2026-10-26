@@ -1,0 +1,41 @@
+{
+  "descricao": {
+    "F1": "Uso normal: entrar, sair, permanecer, interruptor",
+    "F2": "Permanência parada (falso negativo)",
+    "F3": "Passagem sem entrar e disparos espúrios (falso positivo)",
+    "F4": "Falha de dispositivo",
+    "F5": "Queda de rede, plataforma ou hub",
+    "F6": "Comando remoto e preferência",
+    "F7": "Espelho e consulta pelo app"
+  },
+  "familias": {
+    "F1": [
+      "M01",
+      "M02",
+      "M04",
+      "M06",
+      "M09",
+      "M10"
+    ],
+    "F2": [
+      "M05"
+    ],
+    "F3": [
+      "M03"
+    ],
+    "F4": [
+      "M07",
+      "M08"
+    ],
+    "F5": [
+      "M13"
+    ],
+    "F6": [
+      "M11",
+      "M12"
+    ],
+    "F7": [
+      "M14"
+    ]
+  }
+}

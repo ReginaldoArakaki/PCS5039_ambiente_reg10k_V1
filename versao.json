@@ -1,0 +1,9 @@
+{
+  "nome": "V1",
+  "titulo": "sala e cozinha, com gêmeo digital e espelho",
+  "descricao": "Versão V1 da automação: sala e cozinha ligadas por um vão, um controlador por cômodo, gêmeo e espelho por cômodo (v1dt, v1dta, v1dtb)",
+  "ambientes": [
+    "residencia-v1"
+  ],
+  "nucleo_tag": "nucleo-v1.0"
+}
