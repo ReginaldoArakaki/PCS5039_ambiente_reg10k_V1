@@ -10,6 +10,8 @@
   },
   "familias": {
     "F1": [
+      "G01-cozinha",
+      "G01-sala",
       "M01",
       "M02",
       "M04",
@@ -18,23 +20,33 @@
       "M10"
     ],
     "F2": [
+      "G02-cozinha",
+      "G02-sala",
       "M05"
     ],
     "F3": [
+      "G03-VAO-01",
       "M03"
     ],
     "F4": [
+      "G04-cozinha",
+      "G04-sala",
       "M07",
       "M08"
     ],
     "F5": [
+      "G05-casa",
       "M13"
     ],
     "F6": [
+      "G06-cozinha",
+      "G06-sala",
       "M11",
       "M12"
     ],
     "F7": [
+      "G07-cozinha",
+      "G07-sala",
       "M14"
     ]
   }
