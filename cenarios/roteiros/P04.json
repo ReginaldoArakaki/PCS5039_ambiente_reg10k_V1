@@ -1,0 +1,97 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [],
+  "id": "P04",
+  "titulo": "A criança dorme no sofá; os adultos vão para a cozinha",
+  "tipo": "FALSO_NEGATIVO",
+  "duracao_ms": 600000,
+  "descricao": "A família entra; a criança deita no sofá e dorme; os três adultos vão para a cozinha e ficam lá.",
+  "comportamento_ideal": "A sala apaga com a criança dormindo (RN-V1-05); a cozinha fica acesa.",
+  "comportamento_referencia": "A sala apaga T_apagamento depois do último movimento; apagar com a criança dormindo não é indevido.",
+  "requisitos": [
+    "RF-OPR-01",
+    "CF05"
+  ],
+  "regras": [
+    "RN-V1-05",
+    "RN-I0-03"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 6000,
+      "ocupante": "moradora",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 7000,
+      "ocupante": "crianca",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 8000,
+      "ocupante": "idoso",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 10000,
+      "ocupante": "crianca",
+      "acao": "ANDAR",
+      "ate": [
+        1.2,
+        3.2
+      ]
+    },
+    {
+      "t_ms": 25000,
+      "ocupante": "crianca",
+      "acao": "DORMIR"
+    },
+    {
+      "t_ms": 40000,
+      "ocupante": "morador",
+      "acao": "MUDAR_COMODO",
+      "para": "cozinha"
+    },
+    {
+      "t_ms": 42000,
+      "ocupante": "moradora",
+      "acao": "MUDAR_COMODO",
+      "para": "cozinha"
+    },
+    {
+      "t_ms": 44000,
+      "ocupante": "idoso",
+      "acao": "MUDAR_COMODO",
+      "para": "cozinha"
+    },
+    {
+      "t_ms": 60000,
+      "ocupante": "morador",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 540000
+    },
+    {
+      "t_ms": 62000,
+      "ocupante": "moradora",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 538000
+    },
+    {
+      "t_ms": 64000,
+      "ocupante": "idoso",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 536000
+    }
+  ]
+}

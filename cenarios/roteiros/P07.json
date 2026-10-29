@@ -1,0 +1,72 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [
+    {
+      "t_ms": 190000,
+      "tipo": "SA_PERDE_PROXIMA"
+    }
+  ],
+  "id": "P07",
+  "titulo": "O SA falha na entrada do visitante; o morador chega logo depois",
+  "tipo": "FALHA",
+  "duracao_ms": 700000,
+  "descricao": "Com a casa vazia, o SA perde a entrada do visitante; 15 s depois o morador entra pela porta e o SA o detecta.",
+  "comportamento_ideal": "A passagem pela porta logo depois explica a presença: a suspeita é conciliada e não sai do hub.",
+  "comportamento_referencia": "Suspeita aberta no primeiro movimento e conciliada pelo SA do morador (passagem tardia).",
+  "requisitos": [
+    "RF-OPR-06",
+    "RNP-MP3-10"
+  ],
+  "regras": [
+    "RN-V1-06"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 8000,
+      "ocupante": "morador",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 15000,
+      "ocupante": "morador",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 200000,
+      "ocupante": "visitante",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 203000,
+      "ocupante": "visitante",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 480000
+    },
+    {
+      "t_ms": 215000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 218000,
+      "ocupante": "morador",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 470000
+    }
+  ]
+}

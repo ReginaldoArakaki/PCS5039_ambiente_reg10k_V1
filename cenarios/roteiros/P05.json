@@ -1,0 +1,71 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [],
+  "id": "P05",
+  "titulo": "O visitante chega com a casa vazia",
+  "tipo": "NORMAL",
+  "duracao_ms": 480000,
+  "descricao": "O morador passa em casa e sai; com a casa vazia, o visitante chega pela porta, anda pela sala e vai embora.",
+  "comportamento_ideal": "Nada de suspeito: a entrada do visitante é explicada pelo SA da porta.",
+  "comportamento_referencia": "O detector vê a casa vazia depois da saída do morador, mas o SA da porta explica a presença do visitante.",
+  "requisitos": [
+    "RF-OPR-06",
+    "RN34"
+  ],
+  "regras": [
+    "RN-V1-06",
+    "RN-V1-07"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 8000,
+      "ocupante": "morador",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 15000,
+      "ocupante": "morador",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 200000,
+      "ocupante": "visitante",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 203000,
+      "ocupante": "visitante",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 120000
+    },
+    {
+      "t_ms": 330000,
+      "ocupante": "visitante",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 338000,
+      "ocupante": "visitante",
+      "acao": "SAIR"
+    }
+  ]
+}

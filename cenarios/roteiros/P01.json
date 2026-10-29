@@ -1,0 +1,151 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [],
+  "id": "P01",
+  "titulo": "A família chega junta e se espalha",
+  "tipo": "NORMAL",
+  "duracao_ms": 480000,
+  "descricao": "Morador, moradora, criança e idoso entram juntos; a moradora e o morador vão para a cozinha; a criança e o idoso ficam na sala. Depois todos saem.",
+  "comportamento_ideal": "Cada cômodo acende quando alguém entra e fica aceso enquanto há alguém.",
+  "comportamento_referencia": "O SA da porta e o do vão acendem os cômodos; ninguém fica no escuro enquanto se move.",
+  "requisitos": [
+    "RF-OPR-01",
+    "RN34"
+  ],
+  "regras": [
+    "RN-V1-07",
+    "RN-I0-02"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 6000,
+      "ocupante": "moradora",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 7000,
+      "ocupante": "crianca",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 8000,
+      "ocupante": "idoso",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 10000,
+      "ocupante": "crianca",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 290000
+    },
+    {
+      "t_ms": 11000,
+      "ocupante": "idoso",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 290000
+    },
+    {
+      "t_ms": 15000,
+      "ocupante": "moradora",
+      "acao": "MUDAR_COMODO",
+      "para": "cozinha"
+    },
+    {
+      "t_ms": 28000,
+      "ocupante": "moradora",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 230000
+    },
+    {
+      "t_ms": 30000,
+      "ocupante": "morador",
+      "acao": "MUDAR_COMODO",
+      "para": "cozinha"
+    },
+    {
+      "t_ms": 43000,
+      "ocupante": "morador",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 215000
+    },
+    {
+      "t_ms": 260000,
+      "ocupante": "moradora",
+      "acao": "MUDAR_COMODO",
+      "para": "sala"
+    },
+    {
+      "t_ms": 262000,
+      "ocupante": "morador",
+      "acao": "MUDAR_COMODO",
+      "para": "sala"
+    },
+    {
+      "t_ms": 310000,
+      "ocupante": "crianca",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 312000,
+      "ocupante": "idoso",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 314000,
+      "ocupante": "moradora",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 316000,
+      "ocupante": "morador",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 318000,
+      "ocupante": "crianca",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 320000,
+      "ocupante": "idoso",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 322000,
+      "ocupante": "moradora",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 324000,
+      "ocupante": "morador",
+      "acao": "SAIR"
+    }
+  ]
+}

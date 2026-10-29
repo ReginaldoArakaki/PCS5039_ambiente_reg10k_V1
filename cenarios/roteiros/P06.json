@@ -1,0 +1,94 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [],
+  "id": "P06",
+  "titulo": "Todos saem e o visitante fica dormindo; acorda 15 min depois",
+  "tipo": "FALHA",
+  "duracao_ms": 1400000,
+  "descricao": "O visitante dorme no sofá; morador e moradora saem; a casa fica quieta; 15 min depois o visitante acorda e anda pela casa.",
+  "comportamento_ideal": "Presença sem entrada que a explique: suspeita, verificada em 5 min e enviada como \"presença não explicada\", nunca como invasão.",
+  "comportamento_referencia": "O detector abre a suspeita no primeiro movimento, confirma na verificação de 5 min e a plataforma registra o evento de fronteira.",
+  "requisitos": [
+    "RF-OPR-06",
+    "RNP-MP3-10"
+  ],
+  "regras": [
+    "RN-V1-06"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 6000,
+      "ocupante": "moradora",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 7000,
+      "ocupante": "visitante",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 10000,
+      "ocupante": "visitante",
+      "acao": "ANDAR",
+      "ate": [
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "t_ms": 12000,
+      "ocupante": "morador",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 14000,
+      "ocupante": "moradora",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 20000,
+      "ocupante": "visitante",
+      "acao": "DORMIR"
+    },
+    {
+      "t_ms": 25000,
+      "ocupante": "morador",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 27000,
+      "ocupante": "moradora",
+      "acao": "SAIR"
+    },
+    {
+      "t_ms": 930000,
+      "ocupante": "visitante",
+      "acao": "ACORDAR"
+    },
+    {
+      "t_ms": 935000,
+      "ocupante": "visitante",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 460000
+    }
+  ]
+}

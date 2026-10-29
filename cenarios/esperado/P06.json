@@ -1,0 +1,60 @@
+{
+  "cenario": "P06",
+  "modo": "IDEAL",
+  "semente_referencia": 42,
+  "requisitos": [
+    "RF-OPR-06",
+    "RNP-MP3-10"
+  ],
+  "assercoes": [
+    {
+      "id": "A1",
+      "nivel": "REQUISITO",
+      "dado": "casa vazia por inferência",
+      "quando": "o visitante acorda e anda",
+      "entao": {
+        "tipo": "metrica",
+        "nome": "suspeitas_confirmadas",
+        "igual": 1
+      }
+    },
+    {
+      "id": "A2",
+      "nivel": "REQUISITO",
+      "dado": "suspeita confirmada",
+      "quando": "a plataforma recebe",
+      "entao": {
+        "tipo": "evento",
+        "camada": "PLATAFORMA",
+        "evento": "EVENTO_FRONTEIRA",
+        "campos": {
+          "evento": "PRESENCA_NAO_EXPLICADA"
+        }
+      }
+    },
+    {
+      "id": "A3",
+      "nivel": "REQUISITO",
+      "dado": "visitante acordado",
+      "quando": "ele se mexe",
+      "entao": {
+        "tipo": "luz",
+        "comodo": "sala",
+        "valor": "ACESA",
+        "apos": {
+          "evento": "ACORDOU"
+        },
+        "ate_ms": 2000
+      }
+    },
+    {
+      "id": "INV",
+      "nivel": "REQUISITO",
+      "dado": "qualquer controlador",
+      "quando": "o cenário termina",
+      "entao": {
+        "tipo": "invariantes"
+      }
+    }
+  ]
+}

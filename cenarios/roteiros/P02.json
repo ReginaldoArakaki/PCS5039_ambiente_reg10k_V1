@@ -1,0 +1,63 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [],
+  "id": "P02",
+  "titulo": "Um sai e outro fica",
+  "tipo": "NORMAL",
+  "duracao_ms": 420000,
+  "descricao": "Morador e moradora estão na sala; o morador sai da casa e a moradora continua andando na sala.",
+  "comportamento_ideal": "A sala fica acesa enquanto a moradora está lá.",
+  "comportamento_referencia": "O SA da saída não apaga nada; o SP continua vendo a moradora.",
+  "requisitos": [
+    "RF-OPR-01",
+    "RN34"
+  ],
+  "regras": [
+    "RN-I0-03",
+    "RN-V1-07"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "morador",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 6000,
+      "ocupante": "moradora",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 9000,
+      "ocupante": "moradora",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 410000
+    },
+    {
+      "t_ms": 10000,
+      "ocupante": "morador",
+      "acao": "ANDAR_ALEATORIO",
+      "duracao_ms": 40000
+    },
+    {
+      "t_ms": 60000,
+      "ocupante": "morador",
+      "acao": "ANDAR",
+      "ate": [
+        0.95,
+        1.0
+      ]
+    },
+    {
+      "t_ms": 68000,
+      "ocupante": "morador",
+      "acao": "SAIR"
+    }
+  ]
+}

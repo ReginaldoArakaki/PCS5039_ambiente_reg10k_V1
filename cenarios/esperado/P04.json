@@ -1,0 +1,59 @@
+{
+  "cenario": "P04",
+  "modo": "IDEAL",
+  "semente_referencia": 42,
+  "requisitos": [
+    "RF-OPR-01",
+    "CF05"
+  ],
+  "assercoes": [
+    {
+      "id": "A1",
+      "nivel": "REQUISITO",
+      "dado": "criança dormindo na sala",
+      "quando": "a sala apaga",
+      "entao": {
+        "tipo": "metrica",
+        "comodo": "sala",
+        "nome": "apagamentos_indevidos",
+        "igual": 0
+      }
+    },
+    {
+      "id": "A2",
+      "nivel": "REQUISITO",
+      "dado": "adultos andando na cozinha",
+      "quando": "o cenário corre",
+      "entao": {
+        "tipo": "luz_constante",
+        "comodo": "cozinha",
+        "valor": "ACESA",
+        "entre_ms": [
+          70000,
+          600000
+        ]
+      }
+    },
+    {
+      "id": "A3",
+      "nivel": "CARACTERIZACAO",
+      "dado": "criança dormindo",
+      "quando": "até o T_apagamento",
+      "entao": {
+        "tipo": "metrica",
+        "comodo": "sala",
+        "nome": "luz_com_todos_dormindo_s",
+        "max": 120
+      }
+    },
+    {
+      "id": "INV",
+      "nivel": "REQUISITO",
+      "dado": "qualquer controlador",
+      "quando": "o cenário termina",
+      "entao": {
+        "tipo": "invariantes"
+      }
+    }
+  ]
+}

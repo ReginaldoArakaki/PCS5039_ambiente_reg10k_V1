@@ -1,9 +1,10 @@
 {
   "nome": "V1",
-  "titulo": "sala e cozinha, com gêmeo digital e espelho",
-  "descricao": "Versão V1 da automação: sala e cozinha ligadas por um vão, um controlador por cômodo, gêmeo e espelho por cômodo (v1dt, v1dta, v1dtb)",
+  "titulo": "sala e cozinha, com família, visitante e gêmeo digital",
+  "descricao": "Versão V1 da automação: sala e cozinha ligadas por um vão (v1dt a v1dtc) e, na v1dt.1, a família (morador, moradora, criança, idoso, Rex e visitante), ocupante dormindo e presença incompatível",
   "ambientes": [
-    "residencia-v1"
+    "residencia-v1",
+    "residencia-v1-familia"
   ],
-  "nucleo_tag": "nucleo-v1.2"
+  "nucleo_tag": "nucleo-v1.3"
 }

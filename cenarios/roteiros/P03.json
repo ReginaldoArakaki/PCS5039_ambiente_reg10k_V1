@@ -1,0 +1,56 @@
+{
+  "versao": "v1dt.1",
+  "ambiente": "residencia-v1-familia",
+  "modo": "IDEAL",
+  "estado_inicial": {
+    "ocupantes_na_sala": [],
+    "luz": "APAGADA"
+  },
+  "falhas": [],
+  "id": "P03",
+  "titulo": "O idoso lê parado na sala por 20 min",
+  "tipo": "FALSO_NEGATIVO",
+  "duracao_ms": 1320000,
+  "descricao": "O idoso entra, senta e lê parado por 20 min, com um gesto aos 10 min.",
+  "comportamento_ideal": "A luz fica acesa: ele está acordado.",
+  "comportamento_referencia": "Limitação conhecida (como o FN01): apaga 60 s depois do último movimento; o gesto aos 10 min acende de novo.",
+  "requisitos": [
+    "RF-OPR-01",
+    "CF05"
+  ],
+  "regras": [
+    "RN-I0-03",
+    "RN-V1-05"
+  ],
+  "acoes": [
+    {
+      "t_ms": 5000,
+      "ocupante": "idoso",
+      "acao": "ENTRAR"
+    },
+    {
+      "t_ms": 9000,
+      "ocupante": "idoso",
+      "acao": "ANDAR",
+      "ate": [
+        2.0,
+        3.0
+      ]
+    },
+    {
+      "t_ms": 20000,
+      "ocupante": "idoso",
+      "acao": "PARADO"
+    },
+    {
+      "t_ms": 620000,
+      "ocupante": "idoso",
+      "acao": "GESTO"
+    },
+    {
+      "t_ms": 621000,
+      "ocupante": "idoso",
+      "acao": "PARADO"
+    }
+  ]
+}

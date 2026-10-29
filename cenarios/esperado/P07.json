@@ -1,0 +1,42 @@
+{
+  "cenario": "P07",
+  "modo": "IDEAL",
+  "semente_referencia": 42,
+  "requisitos": [
+    "RF-OPR-06",
+    "RNP-MP3-10"
+  ],
+  "assercoes": [
+    {
+      "id": "A1",
+      "nivel": "REQUISITO",
+      "dado": "passagem tardia",
+      "quando": "o morador entra",
+      "entao": {
+        "tipo": "metrica",
+        "nome": "suspeitas_conciliadas",
+        "igual": 1
+      }
+    },
+    {
+      "id": "A2",
+      "nivel": "REQUISITO",
+      "dado": "suspeita conciliada",
+      "quando": "o cenário termina",
+      "entao": {
+        "tipo": "metrica",
+        "nome": "suspeitas_confirmadas",
+        "igual": 0
+      }
+    },
+    {
+      "id": "INV",
+      "nivel": "REQUISITO",
+      "dado": "qualquer controlador",
+      "quando": "o cenário termina",
+      "entao": {
+        "tipo": "invariantes"
+      }
+    }
+  ]
+}
